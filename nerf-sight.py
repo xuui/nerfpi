@@ -87,6 +87,7 @@ try:
             #print "Mode:[6]"
 
         time.sleep(1)
+
 except KeyboardInterrupt:
     print('User press Ctrl+c ,exit;')
 finally:
