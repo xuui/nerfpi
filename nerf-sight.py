@@ -46,22 +46,22 @@ def onPress(channel):
     if sight_mod >6:
         sight_mod=1
     if sight_mod==1:
-    #   print('sight mode:01')
+        #print('sight mode:01')
         oledshow('nerf01.png')
     elif sight_mod==2:
-    #   print('sight mode:02')
+        #print('sight mode:02')
         oledshow('nerf02.png')
     elif sight_mod==3:
-    #   print('sight mode:03')
+        #print('sight mode:03')
         oledshow('nerf03.png')
     elif sight_mod==4:
-    #   print('sight mode:04')
+        #print('sight mode:04')
         oledshow('nerf04.png')
     elif sight_mod==5:
-    #   print('sight mode:05')
+        #print('sight mode:05')
         oledshow('nerf05.png')
     elif sight_mod==6:
-    #   print('sight mode:06')
+        #print('sight mode:06')
         oledshow('nerf06.png')
 
 GPIO.add_event_detect(pin_btn, GPIO.FALLING, callback=onPress, bouncetime=500)
@@ -69,22 +69,22 @@ GPIO.add_event_detect(pin_btn, GPIO.FALLING, callback=onPress, bouncetime=500)
 try:
     while True:
         if sight_mod==1:
-        #    print "Mode:[1]"
+            #print "Mode:[1]"
                 
         if sight_mod==2:
-        #    print "Mode:[2]"
+            #print "Mode:[2]"
         
         if sight_mod==3:
-        #    print "Mode:[3]"
+            #print "Mode:[3]"
         
         if sight_mod==4:
-        #    print "Mode:[4]"
+            #print "Mode:[4]"
         
         if sight_mod==5:
-        #    print "Mode:[5]"
+            #print "Mode:[5]"
         
         if sight_mod==6:
-        #    print "Mode:[6]"
+            #print "Mode:[6]"
 
         time.sleep(1)
 except KeyboardInterrupt:
