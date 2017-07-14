@@ -68,26 +68,9 @@ GPIO.add_event_detect(pin_btn, GPIO.FALLING, callback=onPress, bouncetime=500)
  
 try:
     while True:
-        if sight_mod==1:
+        #if sight_mod==1:
             #print "Mode:[1]"
-                
-        if sight_mod==2:
-            #print "Mode:[2]"
-        
-        if sight_mod==3:
-            #print "Mode:[3]"
-        
-        if sight_mod==4:
-            #print "Mode:[4]"
-        
-        if sight_mod==5:
-            #print "Mode:[5]"
-        
-        if sight_mod==6:
-            #print "Mode:[6]"
-
         time.sleep(1)
-
 except KeyboardInterrupt:
     print('User press Ctrl+c ,exit;')
 finally:
