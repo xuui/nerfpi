@@ -41,7 +41,7 @@ def handleSIGTERM(signum, frame):
 	
 def onPress(channel):
     global sight_mod
-    print('pressed')
+#    print('pressed')
     sight_mod+=1
     if sight_mod >6:
         sight_mod=1
