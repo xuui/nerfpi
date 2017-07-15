@@ -41,7 +41,7 @@ def onPress(channel):
     global sight_mod
 #    print('pressed')
     sight_mod+=1
-    if sight_mod >10:
+    if sight_mod >11:
         sight_mod=1
     if sight_mod==1:
         #print('sight mode:01')
@@ -66,6 +66,8 @@ def onPress(channel):
         oledshow('nerf09.png')
     elif sight_mod==10:
         oledshow('nerf10.png')
+    elif sight_mod==11:
+        oledshow('logo2.png')
 
 oledshow('logo.png')
 GPIO.add_event_detect(pin_btn, GPIO.FALLING, callback=onPress, bouncetime=500)
