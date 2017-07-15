@@ -4,13 +4,15 @@
 
 import RPi.GPIO as GPIO
 import time
+import sys,os
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
 from PIL import Image
 
 GPIO.setmode(GPIO.BCM)
- 
+
+resPath='/home/nerfpi/Resources/'
 #define GPIO pin
 pin_btn=21
 GPIO.setup(pin_btn, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -22,13 +24,9 @@ disp.begin()
 disp.clear()
 disp.display()
 
-logo=Image.open('Resources/logo.png').resize((disp.width, disp.height),Image.ANTIALIAS).convert('1')
-disp.image(logo)
-disp.display()
-
 sight_mod=0
 def oledshow(img):
-  image=Image.open('Resources/'+img).resize((disp.width, disp.height),Image.ANTIALIAS).convert('1')
+  image=Image.open(resPath+img).resize((disp.width, disp.height),Image.ANTIALIAS).convert('1')
   disp.image(image)
   disp.display()
 
@@ -64,6 +62,7 @@ def onPress(channel):
         #print('sight mode:06')
         oledshow('nerf06.png')
 
+oledshow('logo.png')
 GPIO.add_event_detect(pin_btn, GPIO.FALLING, callback=onPress, bouncetime=500)
  
 try:
