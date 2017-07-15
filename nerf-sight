@@ -15,7 +15,6 @@
 case "$1" in
   start)
     echo "Starting Sight"
-    cd /home/nerfpi/
     /home/nerfpi/nerf-sight.py &
     ;;
   stop)
