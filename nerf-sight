@@ -1,4 +1,6 @@
-udo chmod +x /etc/init.d/nerfSight
+#!/bin/bash
+# /etc/init.d/nerf-sight
+# sudo chmod +x /etc/init.d/nerf-sight
 
 ### BEGIN INIT INFO
 # Provides: embbnux
@@ -27,4 +29,3 @@ case "$1" in
     ;;
 esac
 exit 0
-
