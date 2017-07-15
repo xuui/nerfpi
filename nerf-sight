@@ -1,6 +1,4 @@
-#!/bin/bash
-# /etc/init.d/nerfSight
-# sudo chmod +x /etc/init.d/nerfSight
+udo chmod +x /etc/init.d/nerfSight
 
 ### BEGIN INIT INFO
 # Provides: embbnux
