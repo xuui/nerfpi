@@ -22,7 +22,7 @@ disp.begin()
 disp.clear()
 disp.display()
 
-logo=Image.open('logo.png').resize((disp.width, disp.height),Image.ANTIALIAS).convert('1')
+logo=Image.open('Resources/logo.png').resize((disp.width, disp.height),Image.ANTIALIAS).convert('1')
 disp.image(logo)
 disp.display()
 
