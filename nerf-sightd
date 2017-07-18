@@ -1,6 +1,8 @@
 #!/bin/bash
-# /etc/init.d/nerf-sight
-# sudo chmod +x /etc/init.d/nerf-sight
+# /etc/init.d/nerf-sightd
+# sudo chmod +x /etc/init.d/nerf-sightd
+# sudo update-rc.d nerf-sightd defaults
+# service nerf-sightd start OR service nerf-sightd stop
 
 ### BEGIN INIT INFO
 # Provides: embbnux
@@ -19,11 +21,11 @@ case "$1" in
     ;;
   stop)
     echo "Stopping Sight"
-    #killall nerfSight.py
+    #killall nerf-sight.py
     kill $(ps aux | grep -m 1 'python /home/nerfpi/nerf-sight.py' | awk '{ print $2 }')
     ;;
   *)
-    echo "Usage: service nerfSight start|stop"
+    echo "Usage: service nerf-sightd start|stop"
     exit 1
     ;;
 esac
